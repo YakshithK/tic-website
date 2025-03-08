@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
+/* App.css */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Base styles for main content */
+/* Ensure background covers the entire page */
+.main-container {
+  background-image: url('../public/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure background extends beyond the viewport */
+  width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+/* Make sure grid-container also stretches properly */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-items: center;
+  flex: 1; /* Ensures it takes up remaining space */
+  width: 100%;
+}
+
+
+/* Text container with centered content */
+.text-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  margin: 5vw;
+}
+
+/* Left-aligned text styles */
+.text-location,
+.title,
+.subtitle,
+.coming-soon {
   color: white;
+  text-align: left;
 }
 
-.App-link {
-  color: #61dafb;
+/* Base font size */
+.text-location {
+  font-size: 2vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title {
+  font-size: 4vw;
+}
+
+.subtitle {
+  font-size: 2.5vw;
+}
+
+.coming-soon {
+  font-size: 2vw;
+}
+
+/* Image container */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Image styling */
+.logo-image {
+  width: 70%;
+  height: auto;
+}
+
+/* Responsive text size adjustments */
+@media (max-width: 1200px) {
+  .text-location {
+    font-size: 3vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  .title {
+    font-size: 4vw;
+  }
+
+  .subtitle {
+    font-size: 3vw;
+  }
+
+  .coming-soon {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-location {
+    font-size: 3.5vw;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .subtitle {
+    font-size: 3.5vw;
+  }
+
+  .coming-soon {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-location {
+    font-size: 4vw;
+  }
+
+  .title {
+    font-size: 6vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+  }
+
+  .coming-soon {
+    font-size: 4vw;
   }
 }
