@@ -3,7 +3,7 @@
 /* Base styles for main content */
 /* Ensure background covers the entire page */
 .main-container {
-  background-image: url('../public/bg.png');
+  background-image: url('../public/frame1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,6 +11,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  background-attachment: fixed;
 }
 
 /* Make sure grid-container also stretches properly */
@@ -22,7 +23,6 @@
   flex: 1; /* Ensures it takes up remaining space */
   width: 100%;
 }
-
 
 /* Text container with centered content */
 .text-container {
@@ -70,7 +70,7 @@
 
 /* Image styling */
 .logo-image {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
@@ -126,5 +126,98 @@
 
   .coming-soon {
     font-size: 4vw;
+  }
+}
+
+/* Event Info Section */
+.event-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 50px;
+}
+
+/* Left Column: Circles */
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.stat-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #80528d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Right Column: Description */
+.description-container {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* FAQ Section */
+.faq-container {
+  width: 80%;
+  margin: 50px auto;
+  color: black;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  background: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  display: none;
+  margin-top: 10px;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .event-info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .description-container {
+    margin-top: 20px;
   }
 }
