@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'TIC',
-  description: 'Created with v0',
+  description: 'Toronto Innovation Challenge',
   generator: 'v0.dev',
 }
 
